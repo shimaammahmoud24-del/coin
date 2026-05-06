@@ -1,0 +1,97 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    color:white;
+    font-family:Arial;
+}
+
+h1{
+    color:gold;
+    text-shadow:0 0 10px gold;
+}
+
+#turn{
+    margin:10px;
+    color:cyan;
+    font-size:18px;
+}
+
+/* players */
+.players{
+    display:flex;
+    gap:30px;
+    margin:10px;
+}
+
+.player{
+    background:rgba(255,255,255,0.05);
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(255,215,0,0.2);
+}
+
+/* buttons */
+button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:linear-gradient(45deg,gold,orange);
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* scene */
+.scene{
+    width:200px;
+    height:200px;
+    perspective:1000px;
+    margin:15px;
+}
+
+/* coin */
+.coin{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform 1.2s ease;
+}
+
+/* sides */
+.side{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    font-weight:bold;
+    backface-visibility:hidden;
+
+    background: radial-gradient(circle at 30% 30%, #fff7b0, #d4af37, #7a5b10);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.6), 0 0 15px gold;
+}
+
+.front{ transform:rotateY(0deg); }
+.back{ transform:rotateY(180deg); }
+
+/* score */
+.score{
+    margin-top:15px;
+    font-size:20px;
+    color:yellow;
+}
